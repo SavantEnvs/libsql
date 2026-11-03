@@ -1,0 +1,9 @@
+project: savantenvs/libsql
+target: dbfuzz2
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dbfuzz2/testsuite
+cmds:
+  - cmd: /mayhem/dbfuzz2
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,1 @@
+CREATE TABLE q(v FLOAT32(3)); CREATE INDEX q_idx ON q(libsql_vector_idx(v, 'type=diskann', 'metric=l2', 'compress_neighbors=float8', 'alpha=1.2', 'search_l=10', 'insert_l=20', 'max_neighbors=8')); INSERT INTO q VALUES(vector('[1,2,3]')),(vector('[3,2,1]')); SELECT rowid FROM vector_top_k('q_idx', vector('[1,2,3]'), 2);

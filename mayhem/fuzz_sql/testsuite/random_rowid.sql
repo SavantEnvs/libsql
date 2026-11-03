@@ -1,0 +1,1 @@
+CREATE TABLE r(a TEXT) RANDOM ROWID; INSERT INTO r VALUES('a'),('b'),('c'); SELECT count(*) FROM r;

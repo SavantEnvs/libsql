@@ -1,0 +1,10 @@
+project: savantenvs/libsql
+target: fuzz_vector
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_vector/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_vector
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_vector/fuzz_vector.dict
