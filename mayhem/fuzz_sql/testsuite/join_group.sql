@@ -1,0 +1,1 @@
+CREATE TABLE t1(a,b); CREATE TABLE t2(x,y); INSERT INTO t1 VALUES(1,2),(3,4); INSERT INTO t2 VALUES(1,'p'),(3,'q'); SELECT t1.a, count(*), group_concat(t2.y) FROM t1 JOIN t2 ON t1.a=t2.x GROUP BY t1.a HAVING count(*)>0;

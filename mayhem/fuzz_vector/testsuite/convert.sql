@@ -1,0 +1,1 @@
+SELECT vector_extract(vector64(vector('[1,2,3]'))), vector_extract(vector1bit('[1,-1,1,-1]')), vector_extract(vector8('[0.1,0.2]')), vector_extract(vector16('[1,2]')), vector_extract(vectorb16('[1,2]'));
